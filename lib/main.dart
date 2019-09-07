@@ -105,7 +105,8 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
       ),
-          child: _questionIndex < _questions.length
+          child: 
+          _questionIndex < _questions.length
               ? Quiz(
                   answerQuestion: _answerQuestion,
                   questionIndex: _questionIndex,
