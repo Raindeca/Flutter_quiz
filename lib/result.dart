@@ -8,14 +8,15 @@ class Result extends StatelessWidget {
 
   String get resultPhrase {
     String resultText;
-    if (resultScore <= 8) {
-      resultText = 'You\'re Awesome and Understand Me! xD';
-    } else if (resultScore <= 12) {
-      resultText = 'Pretty likeable!';
-    } else if (resultScore <= 16) {
-      resultText = 'Acceptable :(';
-    } else {
-      resultText = 'Too bad! :(';
+    if (resultScore == 5) {
+      resultText = 'You Got A Congrats :)';
+    } else if (resultScore == 4) {
+      resultText = 'Pretty likeable!, You Got B';
+    } else if (resultScore == 3) {
+      resultText = 'Acceptable :(, You Got C';
+    } else if (resultScore ==2) {
+      resultText = 'Too bad! :( You Got D';
+    } else {resultText = 'Remedial? You got E';
     }
     return resultText;
   }
@@ -24,10 +25,11 @@ class Result extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
             resultPhrase,
-            style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold),
+            style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
             textAlign: TextAlign.center,
           ),
           FlatButton(

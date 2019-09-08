@@ -11,14 +11,14 @@ class Question extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       //margin: EdgeInsets.all(10),
-      padding: EdgeInsets.all(8),
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
           border: Border.all(width: 1, color: Colors.black26),
-          borderRadius: BorderRadius.all(Radius.circular(6)),
-          color: Colors.transparent,
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          color: Colors.blue[100],
           boxShadow: [
             BoxShadow(
-              color: Colors.black12,
+              color: Colors.black38,
               blurRadius: 6,
             )
           ]),
@@ -29,17 +29,17 @@ class Question extends StatelessWidget {
         children: <Widget>[
           Container(
               height: 200,
-              color: Colors.purple,
-              child: Image.asset('assets/images/vivi.jpg')),
+              color: Colors.transparent,
+              child: Image.asset('assets/images/flutter.png')),
           Text(
             questionText,
             style: TextStyle(fontSize: 28),
             textAlign: TextAlign.center,
           ),
           Text(
-              'Start Doing what what\'s necessary, then do what\'s possible, and suddenly you are doing the Impossible'),
+              'Tips: You can search Google if you want :)'),
           Container(
-            margin: EdgeInsets.only(top: 32),
+            margin: EdgeInsets.only(top: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               // children: <Widget>[

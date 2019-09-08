@@ -24,31 +24,49 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
-      'questionText': 'What\'s your Favorite Color?',
+      'questionText': 'Who\'s the founder of Flutter?',
       'answer': [
-        {'text': 'Green', 'score': 10},
-        {'text': 'Red', 'score': 5},
-        {'text': 'Blue', 'score': 3},
-        {'text': 'Black', 'score': 1}
-      ]
+        {'text': 'Facebook', 'score': 0},
+        {'text': 'Google', 'score': 1},
+        {'text': 'Microsoft', 'score': 0},
+        {'text': 'Apple', 'score': 0}
+      ],
     },
     {
-      'questionText': 'What\'s your Favorite Anime Genre?',
+      'questionText': 'What language dose flutter use?',
       'answer': [
-        {'text': 'Isekai', 'score': 2},
-        {'text': 'Sci-fi', 'score': 1},
-        {'text': 'Romance', 'score': 10},
-        {'text': 'Slice of Life', 'score': 7}
-      ]
+        {'text': 'Kotlin', 'score': 0},
+        {'text': 'React Native', 'score': 0},
+        {'text': 'Dart', 'score': 1},
+        {'text': 'C++', 'score': 0}
+      ],
     },
     {
-      'questionText': 'What\'s your Favorite Music Genre?',
+      'questionText': 'Google has developed a tools exclusively for Flutter, what is that?',
       'answer': [
-        {'text': 'Artcore', 'score': 1},
-        {'text': 'Bossa Nova', 'score': 3},
-        {'text': 'Jazz', 'score': 3},
-        {'text': 'Dangdut', 'score': 10}
-      ]
+        {'text': 'Dart DevTools', 'score': 1},
+        {'text': 'Dart Debugger', 'score': 0},
+        {'text': 'Dart Android Studio', 'score': 0},
+        {'text': 'Flutter DevTools', 'score': 0}
+      ],
+    },
+    {
+      'questionText': 'A group of widgets in Array is called?',
+      'answer': [
+        {'text': 'Widgets', 'score': 0},
+        {'text': 'Child', 'score': 0},
+        {'text': 'Children', 'score': 1},
+        {'text': 'Flex', 'score': 0}
+      ],
+    },
+    {
+      'questionText': 'in StatefulWidget, When will The Ui get rendered?',
+      'answer': [
+        {'text': 'When Input data or Local State gets null', 'score': 0},
+        {'text': 'When Input data or Local State gets changes', 'score': 1},
+        {'text': 'When Input data changes', 'score': 0},
+        {'text': 'When Input data gets value', 'score': 0}
+      ],
     },
   ];
   var _questionIndex = 0;
@@ -84,29 +102,28 @@ class _MyAppState extends State<MyApp> {
       home: Scaffold(
         //scaffold = make a base page design
         appBar: AppBar(
-          title:  Text('Guessing Anime Characters name'),
+          title: Text('Flutter Quiz! by Raindeca D H'),
           backgroundColor: Colors.black87,
         ),
         body: Container(
           decoration: BoxDecoration(
-        // Box decoration takes a gradient
-        gradient: LinearGradient(
-          // Where the linear gradient begins and ends
-          begin: Alignment.topRight,
-          end: Alignment.bottomLeft,
-          // Add one stop for each color. Stops should increase from 0 to 1
-          stops: [0.1, 0.5, 0.7, 0.9],
-          colors: [
-            // Colors are easy thanks to Flutter's Colors class.
-            Colors.blue[300],
-            Colors.blue[700],
-            Colors.blue[600],
-            Colors.blue[700],
-          ],
-        ),
-      ),
-          child: 
-          _questionIndex < _questions.length
+            // Box decoration takes a gradient
+            gradient: LinearGradient(
+              // Where the linear gradient begins and ends
+              begin: Alignment.topRight,
+              end: Alignment.bottomLeft,
+              // Add one stop for each color. Stops should increase from 0 to 1
+              stops: [0.1, 0.5, 0.7, 0.9],
+              colors: [
+                // Colors are easy thanks to Flutter's Colors class.
+                Colors.blue[300],
+                Colors.blue[700],
+                Colors.blue[600],
+                Colors.blue[700],
+              ],
+            ),
+          ),
+          child: _questionIndex < _questions.length
               ? Quiz(
                   question: _questions[_questionIndex],
                   answerQuestion: _answerQuestion,
