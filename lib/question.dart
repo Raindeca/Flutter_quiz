@@ -37,7 +37,9 @@ class Question extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           Text(
-              'Tips: You can search Google if you want :)'),
+              'Tips: You can search Google if you want :)',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontStyle: FontStyle.italic, fontSize: 16),),
           Container(
             margin: EdgeInsets.only(top: 20),
             child: Row(
