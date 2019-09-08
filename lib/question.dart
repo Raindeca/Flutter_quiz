@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './cardboard.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import './cardboard.dart';
 
 class Question extends StatelessWidget {
   final String questionText;
@@ -8,28 +9,63 @@ class Question extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container( 
-      // decoration: BoxDecoration(
-      //   gradient: LinearGradient(
-      //     begin: Alignment.centerLeft,
-      //     end: Alignment.centerRight,
-      //     stops: [0.1, 0.5, 0.7, 0.9],
-      //     colors: [
-      //       Colors.white30,
-      //       Colors.white54,
-      //       Colors.white60,
-      //       Colors.white70,
-      //     ]
-      //   )
-      // ),
-      // width: double.infinity,
-      // margin: EdgeInsets.all(10),
-      // child: Text(
-      //   questionText,
-      //   style: TextStyle(fontSize: 28),
-      //   textAlign: TextAlign.center,
-      // ),
-      child: Cardboard(questionText),
+    return Container(
+      //margin: EdgeInsets.all(10),
+      padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          border: Border.all(width: 1, color: Colors.black26),
+          borderRadius: BorderRadius.all(Radius.circular(6)),
+          color: Colors.transparent,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: 6,
+            )
+          ]),
+      width: MediaQuery.of(context).size.width,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Container(
+              height: 200,
+              color: Colors.purple,
+              child: Image.asset('assets/images/vivi.jpg')),
+          Text(
+            questionText,
+            style: TextStyle(fontSize: 28),
+            textAlign: TextAlign.center,
+          ),
+          Text(
+              'Start Doing what what\'s necessary, then do what\'s possible, and suddenly you are doing the Impossible'),
+          Container(
+            margin: EdgeInsets.only(top: 32),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // children: <Widget>[
+              //   FlatButton(
+              //      color: Colors.lightGreen[300],
+              //       textColor: Colors.white,
+              //       child: Answer(answerText),
+              //       onPressed: selectHandler,
+              //   ),
+              //   FlatButton(
+              //     color: Colors.lightGreen[300],
+              //       textColor: Colors.white,
+              //       child: Text(answerText),
+              //       onPressed: selectHandler,
+              //   ),
+              //   FlatButton(
+              //     color: Colors.lightGreen[300],
+              //       textColor: Colors.white,
+              //       child: Text(answerText),
+              //       onPressed: selectHandler,
+              //   ),
+              // ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

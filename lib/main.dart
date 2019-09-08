@@ -108,9 +108,10 @@ class _MyAppState extends State<MyApp> {
           child: 
           _questionIndex < _questions.length
               ? Quiz(
+                  question: _questions[_questionIndex],
                   answerQuestion: _answerQuestion,
-                  questionIndex: _questionIndex,
-                  questions: _questions,
+                  // questionIndex: _questionIndex,
+                  // questions: _questions,
                 )
               : Result(_totalScore, _resetQuiz),
         ),

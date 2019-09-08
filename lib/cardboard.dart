@@ -1,69 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_firstapp/answer.dart';
+import './question.dart';
 //import './answer.dart';
 
-class Cardboard extends StatelessWidget {
-  final String questionText;
 
-  Cardboard(this.questionText);
+class Cardboard extends StatelessWidget {
+  // final String questionText;
+  final Map<String, Object> question;
+  final Function answerQuestion;
+  Cardboard({this.question, this.answerQuestion});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
       padding: EdgeInsets.all(8),
-      decoration: BoxDecoration(
-          border: Border.all(width: 1, color: Colors.black26),
-          borderRadius: BorderRadius.all(Radius.circular(6)),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black12,
-              blurRadius: 6,
-            )
-          ]),
-          width: MediaQuery.of(context).size.width,
+      color: Colors.white,
+      margin: EdgeInsets.all(14),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          Container(
-              height: 200,
-              color: Colors.purple,
-              child: Icon(FontAwesomeIcons.kiwiBird)),
-          Text(
-         questionText,
-         style: TextStyle(fontSize: 28),
-         textAlign: TextAlign.center,
-       ),
-          Text(
-              'Start Doing what what\'s necessary, then do what\'s possible, and suddenly you are doing the Impossible'),
-          Container(
-            margin: EdgeInsets.only(top: 32),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              // children: <Widget>[
-              //   FlatButton(
-              //      color: Colors.lightGreen[300],
-              //       textColor: Colors.white,
-              //       child: Answer(answerText),
-              //       onPressed: selectHandler,
-              //   ),
-              //   FlatButton(
-              //     color: Colors.lightGreen[300],
-              //       textColor: Colors.white,
-              //       child: Text(answerText),
-              //       onPressed: selectHandler,
-              //   ),
-              //   FlatButton(
-              //     color: Colors.lightGreen[300],
-              //       textColor: Colors.white,
-              //       child: Text(answerText),
-              //       onPressed: selectHandler,
-              //   ),
-              // ],
-            ),
-          )
+          Question(this.question['questionText']),
+          Answer(this.answerQuestion , this.question['answer'])
         ],
       ),
     );
