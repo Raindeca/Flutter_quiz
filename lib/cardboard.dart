@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import './answer.dart';
 
 class Cardboard extends StatelessWidget {
   final String questionText;
@@ -45,7 +46,7 @@ class Cardboard extends StatelessWidget {
               //   FlatButton(
               //      color: Colors.lightGreen[300],
               //       textColor: Colors.white,
-              //       child: Text(answerText),
+              //       child: Answer(answerText),
               //       onPressed: selectHandler,
               //   ),
               //   FlatButton(
