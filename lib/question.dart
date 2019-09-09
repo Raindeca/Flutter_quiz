@@ -33,7 +33,7 @@ class Question extends StatelessWidget {
               child: Image.asset('assets/images/flutter.png')),
           Text(
             questionText,
-            style: TextStyle(fontSize: 28),
+            style: TextStyle(fontSize: 24),
             textAlign: TextAlign.center,
           ),
           Text(

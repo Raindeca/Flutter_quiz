@@ -9,7 +9,7 @@ class Answer extends StatelessWidget {
   Answer(this.selectHandler, this.answers) {
     List<Widget> answers = <Widget>[];
     print(answers);
-
+    
     this.answers.forEach((answer) {
       answerWidgets.add(
         RaisedButton(

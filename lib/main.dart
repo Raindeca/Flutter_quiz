@@ -24,7 +24,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final _questions = const [
     {
-      'questionText': 'Who\'s the founder of Flutter?',
+      'questionText': 'Who\'s the founder of Flutter? (1/5)',
       'answer': [
         {'text': 'Facebook', 'score': 0},
         {'text': 'Google', 'score': 1},
@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
     {
-      'questionText': 'What language dose flutter use?',
+      'questionText': 'What language does flutter use? (2/5)',
       'answer': [
         {'text': 'Kotlin', 'score': 0},
         {'text': 'React Native', 'score': 0},
@@ -42,7 +42,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
     {
-      'questionText': 'Google has developed a tools exclusively for Flutter, what is that?',
+      'questionText': 'Google has developed a tools exclusively for Flutter, what is that? (3/5)',
       'answer': [
         {'text': 'Dart DevTools', 'score': 1},
         {'text': 'Dart Debugger', 'score': 0},
@@ -51,7 +51,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
     {
-      'questionText': 'A group of widgets in Array is called?',
+      'questionText': 'A group of widgets in Array is called? (4/5)',
       'answer': [
         {'text': 'Widgets', 'score': 0},
         {'text': 'Child', 'score': 0},
@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
       ],
     },
     {
-      'questionText': 'in StatefulWidget, When will The Ui get rendered?',
+      'questionText': 'in StatefulWidget, When will The Ui get rendered? (5/5)',
       'answer': [
         {'text': 'When Input data or Local State gets null', 'score': 0},
         {'text': 'When Input data or Local State gets changes', 'score': 1},
